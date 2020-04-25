@@ -112,7 +112,7 @@ icon.bike <- awesomeIcons(icon = "bicycle",
 leaflet() %>% 
   addProviderTiles("Stamen.Watercolor") %>% 
   addTiles(urlTemplate = "", 
-           attribution = paste0('kaupunkipyorat.hsl.fi ', Sys.Date())) %>%   
+           attribution = paste0('kaupunkipyorat.hsl.fi from 2020-03-26 to ', Sys.Date())) %>% 
   setView(lng = 25.00657,la = 60.18895, zoom = 11) %>% # Kulosaari metro station
   addPolylines(
     data = bikedata_sf,
