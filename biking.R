@@ -57,9 +57,9 @@ statistics <- page %>%
 df <- data.frame(depts, arrs, stringsAsFactors = FALSE)
 
 #-------------------
-# Biking start date
+# Biking start 
 #-------------------
-start_date <- "2020-03-26"
+start_time <- last(depttime)
 
 #-----------------
 # Bike station data
@@ -162,8 +162,9 @@ tag.map.title <- tags$style(HTML("
 
 
 title <- tags$div(
-  tag.map.title, HTML(paste0("From ", start_date, " to ", Sys.Date(), " I've been biking ", statistics))
+  tag.map.title, HTML(paste0("From ", start_time, " to ", Sys.time(), " I've been biking ", statistics))
 )  
+ 
 
 m <- leaflet() %>% 
   addProviderTiles("Stamen.Watercolor") %>% 
